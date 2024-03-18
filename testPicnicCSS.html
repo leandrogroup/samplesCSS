@@ -1,0 +1,3836 @@
+<style>
+    #page + center {
+	display: none;
+}
+
+video {
+	background: #000000;
+}
+
+#page {
+	font-family: Arial, sans-serif;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
+
+.margin-top {w
+	margin-top: 20px;
+}
+
+.margin-bottom {
+	margin-bottom: 20px;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.hidden {
+	display: none;
+}
+
+.heading {
+	background-color: #4b4b4b;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 10px 10px;
+}
+
+.subheading {
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0 0 15px;
+	color: #4b4b4b;
+	text-transform: uppercase;
+}
+
+/*
+/ Typography
+/ ------------------------------ */
+
+h1 {
+	font-size: 16px;
+	color: #4b4b4b;
+}
+
+h2 {
+	font-size: 14px;
+	color: #4b4b4b;
+}
+
+h3 {
+	font-size: 14px;
+	color: #4b4b4b;
+}
+
+h4 {
+	font-size: 14px;
+	color: #4b4b4b;
+}
+
+h5 {
+	font-size: 14px;
+	color: #4b4b4b;
+}
+
+a {
+	color: #0275d8;
+}
+
+a:focus,
+a:hover {
+	color: #014c8c;
+}
+
+/*
+/ Images
+/ ------------------------------ */
+
+.img-circle {
+	border: 2px solid black;
+	border-radius: 50%;
+	width: 70%;
+}
+
+.img-responsive {
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+}
+
+.img-center {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.sentinel {
+	width: 100%;
+}
+
+/*
+/ Transitions
+/ ------------------------------ */
+
+.transition {
+	transition: all 0.15s linear;
+	-o-transition: all 0.15s linear;
+	-moz-transition: all 0.15s linear;
+	-webkit-transition: all 0.15s linear;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInImage {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+/*
+/ Forms
+/ ------------------------------ */
+
+.form-control {
+	font-size: 14px;
+	color: #4b4b4b;
+	padding: 5px 10px;
+	border: 1px solid #dedede;
+}
+
+/*
+/ Buttons
+/ ------------------------------ */
+
+.buttons {
+	margin: 30px 0 0;
+	padding: 30px 0 0;
+
+	border-top: 1px solid #e5e5e5;
+}
+
+.btn {
+	float: left;
+	display: inline-block;
+	padding: 10px 25px;
+	font-size: 13px;
+	font-weight: bold;
+	white-space: nowrap;
+	vertical-align: middle;
+	margin: 0 10px 10px 0;
+
+	border-radius: 2px;
+
+	cursor: pointer;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.buttons .btn:last-child {
+	margin-right: 0;
+}
+
+/*** Button colours ***/
+
+.btn-default {
+	background-color: #0b1f3f;
+	color: #fff;
+}
+
+.btn-default:hover {
+	text-decoration: none;
+	background-color: #2142e7;
+	color: #fff;
+}
+
+.btn-primary {
+	background-color: #4b4b4b;
+	border-color: #4b4b4b;
+	color: #ffffff;
+}
+
+.btn-primary:hover {
+	text-decoration: none;
+	background-color: #444444;
+	color: #ffffff;
+}
+
+/*
+/ Header
+/ ------------------------------ */
+
+#header {
+	text-align: center;
+
+	border-top: 1px solid #f2f2f2;
+}
+
+#header .logo {
+	display: inline-block;
+	float: left;
+	margin: 25px 0;
+}
+
+@media (max-width: 575px) {
+	#header .logo {
+		float: none;
+		margin: 10px 0;
+	}
+}
+
+/*
+/ Header Menu
+/ ------------------------------ */
+
+/*** Flex ***/
+
+#header-menu ul.categories {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+#header-menu ul.categories .row:before,
+#header-menu ul.categories .clearfix:before {
+	content: none;
+}
+
+#header-menu ul.categories > * {
+	-webkit-flex: 0 1 auto;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+}
+
+/*** End Flex ***/
+
+#header-menu,
+#header-menu-mobile {
+}
+
+#header-menu ul.categories {
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+
+#header-menu ul.categories > li {
+	flex-grow: 1;
+	position: relative; /* Remove for Mega Menu */
+	list-style: none;
+
+	text-align: center;
+}
+
+#header-menu ul.categories > li.hide,
+#header-menu ul.categories > li#ID-1 {
+	display: none;
+}
+
+#header-menu ul.categories > li:nth-of-type(7),
+#header-menu ul.categories > li:nth-of-type(8),
+#header-menu ul.categories > li:nth-of-type(9),
+#header-menu ul.categories > li:nth-of-type(10),
+#header-menu ul.categories > li:nth-of-type(11),
+#header-menu ul.categories > li:nth-of-type(12) {
+	/* hide unwanted top categories at menu */
+}
+
+#header-menu ul.categories > li > a {
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+	font-family: Trebuchet MS, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 0;
+	height: 50px;
+	line-height: 50px;
+	color: #4b4b4b;
+	margin: 0;
+
+	background-image: url(https://res.cloudinary.com/revyv/image/upload/v1710401425/Perm%20Assets/Icons/revyv-ebay-menu-arrow.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	padding-right: 18px;
+}
+
+#header-menu ul.categories > li:hover > a,
+#header-menu ul.categories > li > a:hover {
+	text-decoration: none;
+	color: #ff0000;
+}
+
+#header-menu ul.categories > li:hover {
+	background-color: #fcfcfc;
+}
+
+/*** All Cats ***/
+
+#header-menu ul.categories > li#dropdown-all-cats {
+	display: block;
+}
+
+/*** Second Level ***/
+
+#header-menu ul.categories > li > ul {
+	position: absolute;
+	width: 300px;
+	background-color: #fcfcfc;
+	display: none;
+	z-index: 10;
+	padding: 0 20px;
+}
+#header-menu ul.categories > li:nth-of-type(6) > ul, /* Adjust this for non-Mega Menu style customer specific categories to fit frame */
+#header-menu ul.categories > li:last-child > ul {
+	right: 0px;
+}
+#header-menu ul.categories > li:hover > ul {
+	display: block;
+}
+
+#header-menu ul.categories > li > ul > li {
+	position: relative;
+	list-style: none;
+	text-align: left;
+}
+
+#header-menu ul.categories > li > ul > li > a {
+	display: block;
+	font-size: 13px;
+	padding: 18px 0;
+	color: #4b4b4b;
+
+	border-top: 1px solid #e5e5e5;
+}
+
+#header-menu ul.categories > li > ul > li:first-child > a {
+	border: 0;
+}
+
+#header-menu ul.categories > li > ul > li > a:hover,
+#header-menu ul.categories > li > ul > li:hover {
+}
+
+/*** Second level Mega Menu ***/
+
+/*#header-menu ul.categories > li > ul {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	background-color: #ffffff;
+	padding: 10px 10px 20px;
+	box-shadow: 2px 2px 4px #dedede;
+	text-align: left;
+	z-index: 10;
+	display: none;
+}
+
+#header-menu ul.categories > li:hover ul{ display: block; }
+
+#header-menu ul.categories > li > ul > li {
+	float: left;
+	width: 20%;
+	list-style: none;
+}
+
+#header-menu ul.categories > li > ul > li > a {
+	display: block;
+	line-height: 2;
+	padding-left: 15px;
+	color: #4b4b4b;
+	font-size: 13px;
+	background-color: #f0f0f0;
+	text-decoration: none;
+}
+
+#header-menu ul.categories > li > ul > li > a:hover {
+	background-color: #dedede;
+}*/
+
+/*** Third Level ***/
+
+#header-menu ul.categories > li > ul > li > ul {
+	display: none !important;
+}
+
+/*
+/ Main
+/ ------------------------------ */
+
+#main {
+	padding-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+	#main {
+	}
+}
+
+/*
+/ Images
+/ ------------------------------ */
+
+.images {
+	position: relative;
+	margin-right: -15px;
+}
+
+@media (max-width: 575px) {
+	.images {
+		margin-right: 0;
+	}
+}
+
+.images .main-sentinel {
+	width: 100%;
+}
+
+.images .image {
+	width: 20%;
+	float: left;
+	position: static;
+	padding-right: 15px;
+}
+
+@media (max-width: 1023px) {
+	.images .image {
+		width: 25%;
+	}
+}
+
+@media (max-width: 767px) {
+	.images .image {
+		width: 16.66%;
+	}
+}
+
+.images .image[data-image=""] {
+	display: none;
+}
+
+/*** Thumbnails ***/
+
+.image .thumbnail {
+	width: 100%;
+	position: relative;
+	cursor: pointer;
+	border: 1px solid #e5e5e5;
+	margin-bottom: 15px;
+	padding-bottom: 100%;
+}
+
+.image .thumbnails-control {
+	display: none;
+}
+
+.image .thumbnails-control:checked + .thumbnail {
+}
+
+.image #thumbnail-control-video:checked ~ #image-video,
+.image #thumbnail-control-1:checked ~ #image-1,
+.image #thumbnail-control-2:checked ~ #image-2,
+.image #thumbnail-control-3:checked ~ #image-3,
+.image #thumbnail-control-4:checked ~ #image-4,
+.image #thumbnail-control-5:checked ~ #image-5,
+.image #thumbnail-control-6:checked ~ #image-6,
+.image #thumbnail-control-7:checked ~ #image-7,
+.image #thumbnail-control-8:checked ~ #image-8,
+.image #thumbnail-control-9:checked ~ #image-9,
+.image #thumbnail-control-10:checked ~ #image-10,
+.image #thumbnail-control-11:checked ~ #image-11,
+.image #thumbnail-control-12:checked ~ #image-12,
+.image #thumbnail-control-13:checked ~ #image-13,
+.image #thumbnail-control-14:checked ~ #image-14,
+.image #thumbnail-control-15:checked ~ #image-15,
+.image #thumbnail-control-16:checked ~ #image-16 {
+	display: block;
+}
+
+@media (max-width: 575px) {
+	.images {
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	.images .image {
+		width: auto;
+		float: none;
+		display: inline-block;
+		padding: 0;
+	}
+	.image .thumbnail {
+		width: 16px;
+		height: 16px;
+		border-radius: 100%;
+		margin: 10px 5px 0;
+		padding-bottom: 0;
+		border: 1px solid #4b4b4b;
+	}
+	.image .thumbnails-control:checked + label {
+		background-color: #4b4b4b;
+	}
+	.image .thumbnail img {
+		display: none;
+	}
+}
+
+/*** Images ***/
+
+.image .main {
+	animation-name: fadeIn;
+	animation-duration: 0.5s;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	display: none;
+	cursor: pointer;
+	padding-right: 15px;
+}
+
+@media (max-width: 575px) {
+	.image .main {
+		padding-right: 0;
+	}
+}
+
+.image .main .main-content {
+	position: relative;
+	border: 1px solid #e5e5e5;
+	padding-bottom: 100%;
+}
+
+/*** Video ***/
+
+.image .main video {
+	width: 100%;
+}
+
+/*** Arrows ***/
+
+.image .main .prev,
+.image .main .next {
+	background-size: cover;
+	position: absolute;
+	width: 39px;
+	height: 39px;
+	top: 50%;
+	margin-top: -20px;
+	cursor: pointer;
+
+	background-color: #4b4b4b;
+	border-radius: 500px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.image .main .prev {
+	left: 5px;
+	background-image: url("https://i.ebayimg.com/thumbs/images/g/FecAAOSwuRBkBne6/s-l225.webp");
+}
+
+.image .main .next {
+	right: 5px;
+	background-image: url("images/next.png");
+}
+
+/***
+.image .main .prev,
+.image .main .next{
+	background-size: cover;
+	position: absolute;
+	width: 30px;
+	height: 75px;
+	top: 50%;
+	margin-top: -37px;
+	cursor: pointer;
+
+	background-color: #c1c1c1;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.image .main .prev{
+	left: -15px;
+	background-image: url('images/prev2.png');
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+
+.image .main .next{
+	right: -15px;
+	background-image: url('images/next2.png');
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+***/
+
+.image .main .prev[data-prev=""],
+.image .main .next[data-next=""] {
+	display: none;
+}
+
+.image .main-control {
+	display: none;
+}
+
+@media (min-width: 576px) {
+	.image .main .prev,
+	.image .main .next {
+		display: none;
+	}
+}
+
+/*** Click to zoom ***/
+
+@media (min-width: 768px) {
+	.image .main-control:checked + .main {
+		animation-name: fadeInImage;
+		animation-duration: 0.5s;
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 100;
+		background-color: rgba(0, 0, 0, 0.65);
+		text-align: center;
+	}
+	.image .main-control:checked + .main .main-content {
+		position: relative;
+		border: 0;
+		width: 600px;
+		height: 600px;
+		padding: 0;
+		background-color: #ffffff;
+		margin: 50px auto 0;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+	}
+	.image .main-control:checked + .main .main-content img {
+		max-width: 100%;
+	}
+	.image .main-control:checked + .main .main-content .prev,
+	.image .main-control:checked + .main .main-content .next {
+		display: none;
+	}
+	.image .main .main-content:after {
+		content: "[Click to Zoom]";
+		background-image: url("images/zoom.png");
+		background-repeat: no-repeat;
+		padding-left: 20px;
+		line-height: 17px;
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+		color: #4b4b4b;
+		font-size: 12px;
+		display: none;
+	}
+	.image .main-control:checked + .main .main-content:after {
+		bottom: auto;
+		left: auto;
+		top: 10px;
+		right: 10px;
+		width: 19px;
+		height: 19px;
+		padding: 0;
+		content: "";
+		background-image: url("images/close.png");
+		display: block;
+	}
+}
+
+@media (min-width: 1024px) {
+	.image .main-control:checked + .main .main-content {
+		width: 800px;
+		height: 800px;
+	}
+}
+
+/*
+/ Item Description
+/ ------------------------------ */
+
+/*** Title ***/
+
+#title h1 {
+	padding-top: 70px;
+	padding-bottom: 25px;
+	margin-bottom: 30px;
+	font-size: 22px;
+	color: #4b4b4b;
+	line-height: 1.2;
+
+	background-image: url(https://res.cloudinary.com/revyv/image/upload/v1710401433/Perm%20Assets/Icons/revyv-ebay-header-bar.png);
+	background-repeat: no-repeat;
+
+	border-bottom: 1px solid #808080;
+}
+
+/*** RRP ***/
+
+.rrp {
+	color: #4b4b4b;
+}
+.rrp[data-rrp=""],
+.rrp[data-rrp="0.00"] {
+	display: none;
+}
+
+.rrp .label {
+	font-size: 16px;
+}
+
+.rrp .currency,
+.rrp .value {
+	font-size: 16px;
+	text-decoration: line-through;
+}
+
+/*** Price ***/
+
+.main-price {
+	color: #4b4b4b;
+}
+.main-price[data-price=""],
+.main-price[data-price="0.00"] {
+	display: none;
+}
+
+.main-price .currency,
+.main-price .value {
+	font-size: 30px;
+}
+
+/*** Saving ***/
+
+.price-saving-percentage {
+	color: #ff0000;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.price-saving-percentage[data-save=""],
+.price-saving-percentage[data-save="0"],
+.price-saving-percentage[data-save="0%"] {
+	display: none;
+}
+
+.price-saving-percentage .label {
+	font-size: 16px;
+}
+
+.price-saving-percentage .value {
+	font-size: 16px;
+}
+
+/*** Description ***/
+
+.item-description {
+}
+
+.Specification-Table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.Specification-Table th {
+	width: 50%;
+	vertical-align: top;
+	text-align: left;
+
+	color: #4b4b4b;
+	font-size: 14px;
+
+	padding: 5px 0;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.Specification-Table td {
+	width: 50%;
+	vertical-align: top;
+	text-align: left;
+
+	color: #4b4b4b;
+	font-size: 14px;
+
+	padding: 5px 0;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+/*** Description Overides ***/
+
+.item-description img {
+	max-width: 100%;
+	width: auto !important;
+	height: auto !important;
+}
+
+.item-description ul li,
+.item-description ol li {
+	margin-bottom: 4px;
+}
+
+.item-description table {
+	font-size: 13px;
+}
+
+.item-description font,
+.item-description b font,
+.item-description strong font,
+.item-description p font,
+.item-description ul li font,
+.item-description ol li font,
+.item-description th font,
+.item-description td font,
+.item-description h2 font,
+.item-description h3 font,
+.item-description h4 font,
+.item-description h5 font,
+.item-description b,
+.item-description strong {
+	font-size: inherit !important;
+	font-family: inherit !important;
+	line-height: inherit !important;
+}
+
+.item-description p,
+.item-description ul li,
+.item-description ol li,
+.item-description th,
+.item-description td,
+.item-description h2,
+.item-description h3,
+.item-description h4,
+.item-description h5,
+.item-description span,
+.item-description div {
+	font-family: inherit !important;
+	line-height: inherit !important;
+}
+
+/*
+/ Tabs
+/ ------------------------------ */
+
+.tabs {
+	margin-top: 30px;
+}
+
+.tabs .tab-control {
+	display: none;
+}
+
+.tabs > label {
+	display: block;
+
+	float: left;
+	position: relative;
+	z-index: 10;
+
+	padding: 15px 0;
+	margin: 0 30px 0 0;
+
+	font-size: 16px;
+	font-weight: bold;
+	color: #acacac;
+}
+
+.tabs > label[for="tab-control-2"],
+.tabs #tab-content-2 {
+	display: none;
+}
+
+@media (max-width: 1023px) {
+	.tabs > label {
+		margin: 0 20px 0 0;
+	}
+}
+
+.tabs > label:hover {
+	color: #4b4b4b;
+	cursor: pointer;
+}
+
+.tabs #tab-control-1:checked ~ label[for="tab-control-1"],
+.tabs #tab-control-2:checked ~ label[for="tab-control-2"],
+.tabs #tab-control-3:checked ~ label[for="tab-control-3"],
+.tabs #tab-control-4:checked ~ label[for="tab-control-4"],
+.tabs #tab-control-5:checked ~ label[for="tab-control-5"],
+.tabs #tab-control-6:checked ~ label[for="tab-control-6"] {
+	background-color: #fff;
+	color: #4b4b4b;
+}
+
+@media (max-width: 767px) {
+	.tabs {
+		border: 1px solid #4b4b4b;
+		border-top: 0;
+	}
+	.tabs > label {
+		width: 100%;
+		margin: 0;
+		padding: 15px 15px;
+		border: 0;
+		border-top: 1px solid #4b4b4b;
+
+		background-image: url(images/tab-arrow-mobile.png);
+		background-repeat: no-repeat;
+		background-position: right center;
+	}
+	.tabs > label:hover,
+	.tabs #tab-control-1:checked ~ label[for="tab-control-1"],
+	.tabs #tab-control-2:checked ~ label[for="tab-control-2"],
+	.tabs #tab-control-3:checked ~ label[for="tab-control-3"],
+	.tabs #tab-control-4:checked ~ label[for="tab-control-4"],
+	.tabs #tab-control-5:checked ~ label[for="tab-control-5"],
+	.tabs #tab-control-6:checked ~ label[for="tab-control-6"] {
+		background-image: url(images/tab-arrow-mobile-open.png);
+		border-bottom: 0;
+	}
+}
+
+.tabs .tab-content {
+	display: none;
+	/*animation-name: fadeIn;
+  	animation-duration: 1.0s;*/
+
+	float: left;
+	width: 100%;
+	padding: 20px 0;
+
+	font-size: 14px;
+	line-height: 1.4;
+	color: #4b4b4b;
+
+	border-top: 1px solid #acacac;
+	background-color: #fff;
+}
+
+.tabs .tab-content img,
+.tabs .tab-content img {
+	width: auto !important;
+	height: auto !important;
+	max-width: 100%;
+}
+
+.tabs .tab-content ul li,
+.tabs .tab-content ol li {
+	margin-bottom: 4px;
+}
+
+@media (max-width: 767px) {
+	.tabs .tab-content {
+		border: 0;
+		padding: 15px;
+	}
+}
+
+#tab-control-1:checked ~ #tab-content-1,
+#tab-control-2:checked ~ #tab-content-2,
+#tab-control-3:checked ~ #tab-content-3,
+#tab-control-4:checked ~ #tab-content-4,
+#tab-control-5:checked ~ #tab-content-5,
+#tab-control-6:checked ~ #tab-content-6 {
+	display: block;
+}
+
+@media (max-width: 767px) {
+	.tabs .desktop-label {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	.tabs .mobile-label {
+		display: none;
+	}
+}
+
+/*
+/ Scroll Product Box
+/ ------------------------------ */
+
+.tabs-scroll {
+	position: relative;
+}
+
+.tabs-scroll .tab-control {
+	display: none;
+}
+
+.tabs-scroll > label {
+	z-index: 100;
+
+	position: absolute;
+	top: 50%;
+	width: 12px;
+	height: 18px;
+
+	margin: -15px 0 0;
+	cursor: pointer;
+
+	background-color: transparent;
+}
+
+.tabs-scroll > label.left {
+	left: 10px;
+	background-image: url(images/arrow-left.png);
+}
+
+.tabs-scroll > label.right {
+	right: 10px;
+	background-image: url(images/arrow-right.png);
+}
+
+.tabs-scroll .tab-control:checked + label {
+	opacity: 0.2;
+	cursor: default;
+}
+
+@media (max-width: 767px) {
+	#scroll-control-1:checked ~ .tab-contents-mobile #scroll-content-1-mobile,
+	#scroll-control-2:checked ~ .tab-contents-mobile #scroll-content-2-mobile {
+		display: block;
+	}
+}
+
+@media (min-width: 768px) {
+	#scroll-control-1:checked ~ .tab-contents #scroll-content-1,
+	#scroll-control-2:checked ~ .tab-contents #scroll-content-2 {
+		display: block;
+	}
+}
+
+.tabs-scroll .tab-contents .tab-content {
+	animation-name: fadeIn;
+	animation-duration: 1s;
+	display: none;
+	padding: 0 30px;
+}
+
+@media (max-width: 767px) {
+	.tabs-scroll > label {
+		display: none;
+	}
+	.tabs-scroll .tab-contents .tab-content {
+		display: block;
+		padding: 0 15px;
+	}
+	.tabs-scroll .products {
+		padding: 0;
+	}
+}
+
+/*
+/ Product Box
+/ ------------------------------ */
+
+.box-products {
+	display: none;
+	margin-bottom: 20px;
+}
+
+.box-products h2 {
+	font-weight: normal;
+	padding: 10px 0;
+	border-bottom: 1px solid #808080;
+	font-size: 16px;
+	margin: 0;
+	color: #4b4b4b;
+}
+
+/*
+/ Product
+/ ------------------------------ */
+
+.products {
+	position: relative;
+	padding: 0 15px 0;
+}
+
+@media (max-width: 1023px) {
+	.products {
+		padding: 0;
+	}
+}
+
+/*** Box Hover ***/
+
+.products .product-hover {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	padding: 0 15px;
+	left: 0;
+	top: 0;
+
+	opacity: 0.75;
+	display: none;
+}
+
+.products .product-hover div {
+	position: relative;
+	height: 100%;
+	background-color: #000000;
+}
+
+.products .product-link {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.products .product-link span {
+	display: inline-block;
+	position: relative;
+	top: 45%;
+	margin: 0;
+	padding: 0 20px;
+
+	line-height: 26px;
+	color: #fff;
+	font-size: 20px;
+	letter-spacing: 0.025em;
+	text-decoration: ;
+
+	background-image: url(images/arrow-white.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+@media (min-width: 576px) {
+	.products:hover .product-hover,
+	.products:hover .product-link {
+		display: block;
+	}
+}
+
+@media (max-width: 576px) {
+	.products .product-link {
+		display: block;
+	}
+	.products .product-link span {
+		display: none;
+	}
+}
+
+/*** End Box Hover ***/
+
+.products .product {
+	display: none;
+	margin: 20px 0;
+}
+
+@media (min-width: 1024px) {
+	.products .product {
+		padding: 0 30px;
+	}
+}
+
+.products .product.hidden {
+	display: none !important;
+}
+
+.products .product .link {
+	display: block;
+	color: #4b4b4b;
+	text-decoration: none;
+}
+
+.products .product .image {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: block;
+	width: 100%;
+	margin-bottom: 10px;
+	padding-bottom: 100%;
+	transition: all 0.15s linear;
+	-o-transition: all 0.15s linear;
+	-moz-transition: all 0.15s linear;
+	-webkit-transition: all 0.15s linear;
+}
+
+.products .product > .image:hover {
+	opacity: 0.85;
+}
+
+.products .product .image img {
+	width: 100%;
+}
+
+/*** Enlarge ***/
+
+.products .product .image .enlarge {
+	display: none;
+	z-index: 100;
+	position: absolute;
+	left: 108%;
+	top: -25%;
+	width: 320px;
+	height: 320px;
+	padding: 10px;
+	border: 1px solid #666;
+	border-radius: 3px;
+	background-color: #fff;
+}
+
+.products .product:nth-of-type(3) .image .enlarge,
+.products .product:nth-of-type(4) .image .enlarge,
+.products .product:nth-of-type(7) .image .enlarge,
+.products .product:nth-of-type(8) .image .enlarge {
+	left: auto;
+	right: 108%;
+}
+
+.products .product .image .enlarge:after {
+	width: 23px;
+	height: 22px;
+	background-image: url(images/popup.png);
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin: -11px 0 0 -23px;
+	content: "";
+}
+
+.products .product:nth-of-type(3) .image .enlarge:after,
+.products .product:nth-of-type(4) .image .enlarge:after,
+.products .product:nth-of-type(7) .image .enlarge:after,
+.products .product:nth-of-type(8) .image .enlarge:after {
+	left: auto;
+	right: 0;
+	margin: -11px -23px 0 0;
+	background-position: -23px top;
+}
+
+@media (min-width: 1024px) {
+	.products .product .image:hover .enlarge {
+		display: block;
+	}
+	.products .product .image:hover .enlarge:hover {
+		display: none;
+	}
+}
+
+/*** Enlarge End ***/
+
+.products .product .title {
+	height: 74px;
+	line-height: 17px;
+	overflow: hidden;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	color: #4b4b4b;
+	margin-bottom: 5px;
+}
+
+.products .product .title:hover {
+	/*text-decoration: underline;*/
+}
+
+@media (max-width: 1023px) {
+	.products .product .title {
+		height: 85px;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+	.products .product .title {
+		height: 55px;
+	}
+}
+
+.products .product .rrp {
+	overflow: hidden;
+	margin: 0;
+	height: 19px;
+	display: block;
+	font-size: 12px;
+	color: #666;
+	text-decoration: line-through;
+	display: none;
+}
+
+.products .product .price {
+	display: block;
+	margin: 0;
+	font-size: 15px;
+	color: #4b4b4b;
+}
+
+/*
+/ Footer
+/ ------------------------------ */
+
+#footer .row {
+	margin: 0;
+	padding: 65px 20px 50px;
+	background-image: url(images/footer.png);
+	background-repeat: no-repeat;
+}
+
+/*** Nav ***/
+
+#footer ul {
+	list-style: none;
+	padding: 0;
+}
+
+#footer ul li {
+	margin-bottom: 12px;
+}
+
+#footer ul li a {
+	display: block;
+	font-size: 13px;
+	color: #4b4b4b;
+}
+
+#footer ul li a:hover {
+	color: #4b4b4b;
+}
+
+#footer ul.categories > li > ul,
+#footer ul.categories > li > ul > li > ul {
+	display: none;
+}
+
+/*
+/ Footer Sub
+/ ------------------------------ */
+
+#footer-sub {
+	padding: 30px 0 10px;
+	text-align: center;
+}
+
+/*** Copyright box ***/
+
+.copyright {
+	display: inline-block;
+	text-align: center;
+	padding: 10px 15px 0;
+	margin: 0 5px;
+	min-height: 75px;
+}
+
+.copyright:hover {
+	text-decoration: none;
+}
+
+.copyright span {
+	display: block;
+	color: #606060;
+	font-size: 10px;
+	font-family: Arial, sans-serif;
+	line-height: 12px;
+	width: auto;
+	text-align: center;
+}
+
+.copyright img {
+	margin-top: 5px;
+	/*!
+ * Bootstrap v4.0.0-alpha.3 (http://getbootstrap.com)
+ * Copyright 2011-2016 The Bootstrap Authors
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+}
+/*
+ * 
+ ******************** normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css **********************/
+
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+progress {
+	vertical-align: baseline;
+}
+
+template,
+[hidden] {
+	display: none;
+}
+
+a {
+	background-color: transparent;
+}
+
+a:active,
+a:hover {
+	outline-width: 0;
+}
+
+abbr[title] {
+	border-bottom: none;
+	text-decoration: underline;
+	text-decoration: underline dotted;
+}
+
+b,
+strong {
+	font-weight: inherit;
+}
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+dfn {
+	font-style: italic;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+mark {
+	background-color: #ff0;
+	color: #000;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+img {
+	max-width: 100%;
+	border-style: none;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+figure {
+	margin: 1em 40px;
+}
+
+hr {
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+
+button,
+input,
+select,
+textarea {
+	font: inherit;
+}
+
+optgroup {
+	font-weight: bold;
+}
+
+button,
+input,
+select {
+	overflow: visible;
+}
+
+button,
+input,
+select,
+textarea {
+	margin: 0;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	cursor: pointer;
+}
+
+[disabled] {
+	cursor: default;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+button:-moz-focusring,
+input:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal;
+}
+
+textarea {
+	overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+[type="search"] {
+	-webkit-appearance: textfield;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/*
+   * 
+   ******************** reboot **********************/
+
+html {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+@-ms-viewport {
+	width: device-width;
+}
+
+html {
+	font-size: 16px;
+	-ms-overflow-style: scrollbar;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	background-color: #fff;
+}
+
+[tabindex="-1"]:focus {
+	outline: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+abbr[title],
+abbr[data-original-title] {
+	cursor: help;
+	border-bottom: 1px dotted #818a91;
+}
+
+address {
+	margin-bottom: 10px;
+	font-style: normal;
+	line-height: inherit;
+}
+
+ol,
+ul,
+dl {
+	margin-top: 0;
+	margin-bottom: 10px;
+	padding-left: 20px;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+	margin-bottom: 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin-bottom: 5px;
+	margin-left: 0;
+}
+
+blockquote {
+	margin: 0 0 10px;
+}
+
+a {
+	color: #0275d8;
+	text-decoration: none;
+}
+
+a:focus,
+a:hover {
+	color: #014c8c;
+	text-decoration: underline;
+}
+
+a:focus {
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+a:not([href]):not([tabindex]) {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus,
+a:not([href]):not([tabindex]):hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+	outline: none;
+}
+
+pre {
+	margin-top: 0;
+	margin-bottom: 10px;
+	overflow: auto;
+}
+
+figure {
+	margin: 0 0 10px;
+}
+
+img {
+	vertical-align: middle;
+}
+
+[role="button"] {
+	cursor: pointer;
+}
+
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+}
+
+table {
+	border-collapse: collapse;
+	background-color: transparent;
+}
+
+caption {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #818a91;
+	text-align: left;
+	caption-side: bottom;
+}
+
+th {
+	text-align: left;
+}
+
+label {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+button:focus {
+	outline: 1px dotted;
+	outline: 5px auto -webkit-focus-ring-color;
+}
+
+input,
+button,
+select,
+textarea {
+	margin: 0;
+	line-height: inherit;
+	border-radius: 0;
+}
+
+input[type="radio"]:disabled,
+input[type="checkbox"]:disabled {
+	cursor: not-allowed;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+	-webkit-appearance: listbox;
+}
+
+textarea {
+	resize: vertical;
+}
+
+fieldset {
+	min-width: 0;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+legend {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin-bottom: 10px;
+	font-size: 1.5em;
+	line-height: inherit;
+}
+
+input[type="search"] {
+	-webkit-appearance: none;
+}
+
+output {
+	display: inline-block;
+}
+
+[hidden] {
+	display: none !important;
+}
+
+/*
+   * 
+   ******************** grid **********************/
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.container::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media (min-width: 576px) {
+	.container {
+		max-width: 540px;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 720px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.container {
+		max-width: 1010px;
+	}
+}
+
+.container-fluid {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.container-fluid::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.row {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.clearfix:after,
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-xl-1,
+.col-xl-2,
+.col-xl-3,
+.col-xl-4,
+.col-xl-5,
+.col-xl-6,
+.col-xl-7,
+.col-xl-8,
+.col-xl-9,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12 {
+	position: relative;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.col-xs-1 {
+	float: left;
+	width: 8.333333%;
+}
+
+.col-xs-2 {
+	float: left;
+	width: 16.666667%;
+}
+
+.col-xs-3 {
+	float: left;
+	width: 25%;
+}
+
+.col-xs-4 {
+	float: left;
+	width: 33.333333%;
+}
+
+.col-xs-5 {
+	float: left;
+	width: 41.666667%;
+}
+
+.col-xs-6 {
+	float: left;
+	width: 50%;
+}
+
+.col-xs-7 {
+	float: left;
+	width: 58.333333%;
+}
+
+.col-xs-8 {
+	float: left;
+	width: 66.666667%;
+}
+
+.col-xs-9 {
+	float: left;
+	width: 75%;
+}
+
+.col-xs-10 {
+	float: left;
+	width: 83.333333%;
+}
+
+.col-xs-11 {
+	float: left;
+	width: 91.666667%;
+}
+
+.col-xs-12 {
+	float: left;
+	width: 100%;
+}
+
+.pull-xs-0 {
+	right: auto;
+}
+
+.pull-xs-1 {
+	right: 8.333333%;
+}
+
+.pull-xs-2 {
+	right: 16.666667%;
+}
+
+.pull-xs-3 {
+	right: 25%;
+}
+
+.pull-xs-4 {
+	right: 33.333333%;
+}
+
+.pull-xs-5 {
+	right: 41.666667%;
+}
+
+.pull-xs-6 {
+	right: 50%;
+}
+
+.pull-xs-7 {
+	right: 58.333333%;
+}
+
+.pull-xs-8 {
+	right: 66.666667%;
+}
+
+.pull-xs-9 {
+	right: 75%;
+}
+
+.pull-xs-10 {
+	right: 83.333333%;
+}
+
+.pull-xs-11 {
+	right: 91.666667%;
+}
+
+.pull-xs-12 {
+	right: 100%;
+}
+
+.push-xs-0 {
+	left: auto;
+}
+
+.push-xs-1 {
+	left: 8.333333%;
+}
+
+.push-xs-2 {
+	left: 16.666667%;
+}
+
+.push-xs-3 {
+	left: 25%;
+}
+
+.push-xs-4 {
+	left: 33.333333%;
+}
+
+.push-xs-5 {
+	left: 41.666667%;
+}
+
+.push-xs-6 {
+	left: 50%;
+}
+
+.push-xs-7 {
+	left: 58.333333%;
+}
+
+.push-xs-8 {
+	left: 66.666667%;
+}
+
+.push-xs-9 {
+	left: 75%;
+}
+
+.push-xs-10 {
+	left: 83.333333%;
+}
+
+.push-xs-11 {
+	left: 91.666667%;
+}
+
+.push-xs-12 {
+	left: 100%;
+}
+
+.offset-xs-1 {
+	margin-left: 8.333333%;
+}
+
+.offset-xs-2 {
+	margin-left: 16.666667%;
+}
+
+.offset-xs-3 {
+	margin-left: 25%;
+}
+
+.offset-xs-4 {
+	margin-left: 33.333333%;
+}
+
+.offset-xs-5 {
+	margin-left: 41.666667%;
+}
+
+.offset-xs-6 {
+	margin-left: 50%;
+}
+
+.offset-xs-7 {
+	margin-left: 58.333333%;
+}
+
+.offset-xs-8 {
+	margin-left: 66.666667%;
+}
+
+.offset-xs-9 {
+	margin-left: 75%;
+}
+
+.offset-xs-10 {
+	margin-left: 83.333333%;
+}
+
+.offset-xs-11 {
+	margin-left: 91.666667%;
+}
+
+@media (min-width: 576px) {
+	.col-sm-1 {
+		float: left;
+		width: 8.333333%;
+	}
+	.col-sm-2 {
+		float: left;
+		width: 16.666667%;
+	}
+	.col-sm-3 {
+		float: left;
+		width: 25%;
+	}
+	.col-sm-4 {
+		float: left;
+		width: 33.333333%;
+	}
+	.col-sm-5 {
+		float: left;
+		width: 41.666667%;
+	}
+	.col-sm-6 {
+		float: left;
+		width: 50%;
+	}
+	.col-sm-7 {
+		float: left;
+		width: 58.333333%;
+	}
+	.col-sm-8 {
+		float: left;
+		width: 66.666667%;
+	}
+	.col-sm-9 {
+		float: left;
+		width: 75%;
+	}
+	.col-sm-10 {
+		float: left;
+		width: 83.333333%;
+	}
+	.col-sm-11 {
+		float: left;
+		width: 91.666667%;
+	}
+	.col-sm-12 {
+		float: left;
+		width: 100%;
+	}
+	.pull-sm-0 {
+		right: auto;
+	}
+	.pull-sm-1 {
+		right: 8.333333%;
+	}
+	.pull-sm-2 {
+		right: 16.666667%;
+	}
+	.pull-sm-3 {
+		right: 25%;
+	}
+	.pull-sm-4 {
+		right: 33.333333%;
+	}
+	.pull-sm-5 {
+		right: 41.666667%;
+	}
+	.pull-sm-6 {
+		right: 50%;
+	}
+	.pull-sm-7 {
+		right: 58.333333%;
+	}
+	.pull-sm-8 {
+		right: 66.666667%;
+	}
+	.pull-sm-9 {
+		right: 75%;
+	}
+	.pull-sm-10 {
+		right: 83.333333%;
+	}
+	.pull-sm-11 {
+		right: 91.666667%;
+	}
+	.pull-sm-12 {
+		right: 100%;
+	}
+	.push-sm-0 {
+		left: auto;
+	}
+	.push-sm-1 {
+		left: 8.333333%;
+	}
+	.push-sm-2 {
+		left: 16.666667%;
+	}
+	.push-sm-3 {
+		left: 25%;
+	}
+	.push-sm-4 {
+		left: 33.333333%;
+	}
+	.push-sm-5 {
+		left: 41.666667%;
+	}
+	.push-sm-6 {
+		left: 50%;
+	}
+	.push-sm-7 {
+		left: 58.333333%;
+	}
+	.push-sm-8 {
+		left: 66.666667%;
+	}
+	.push-sm-9 {
+		left: 75%;
+	}
+	.push-sm-10 {
+		left: 83.333333%;
+	}
+	.push-sm-11 {
+		left: 91.666667%;
+	}
+	.push-sm-12 {
+		left: 100%;
+	}
+	.offset-sm-0 {
+		margin-left: 0%;
+	}
+	.offset-sm-1 {
+		margin-left: 8.333333%;
+	}
+	.offset-sm-2 {
+		margin-left: 16.666667%;
+	}
+	.offset-sm-3 {
+		margin-left: 25%;
+	}
+	.offset-sm-4 {
+		margin-left: 33.333333%;
+	}
+	.offset-sm-5 {
+		margin-left: 41.666667%;
+	}
+	.offset-sm-6 {
+		margin-left: 50%;
+	}
+	.offset-sm-7 {
+		margin-left: 58.333333%;
+	}
+	.offset-sm-8 {
+		margin-left: 66.666667%;
+	}
+	.offset-sm-9 {
+		margin-left: 75%;
+	}
+	.offset-sm-10 {
+		margin-left: 83.333333%;
+	}
+	.offset-sm-11 {
+		margin-left: 91.666667%;
+	}
+}
+
+@media (min-width: 768px) {
+	.col-md-1 {
+		float: left;
+		width: 8.333333%;
+	}
+	.col-md-2 {
+		float: left;
+		width: 16.666667%;
+	}
+	.col-md-3 {
+		float: left;
+		width: 25%;
+	}
+	.col-md-4 {
+		float: left;
+		width: 33.333333%;
+	}
+	.col-md-5 {
+		float: left;
+		width: 41.666667%;
+	}
+	.col-md-6 {
+		float: left;
+		width: 50%;
+	}
+	.col-md-7 {
+		float: left;
+		width: 58.333333%;
+	}
+	.col-md-8 {
+		float: left;
+		width: 66.666667%;
+	}
+	.col-md-9 {
+		float: left;
+		width: 75%;
+	}
+	.col-md-10 {
+		float: left;
+		width: 83.333333%;
+	}
+	.col-md-11 {
+		float: left;
+		width: 91.666667%;
+	}
+	.col-md-12 {
+		float: left;
+		width: 100%;
+	}
+	.pull-md-0 {
+		right: auto;
+	}
+	.pull-md-1 {
+		right: 8.333333%;
+	}
+	.pull-md-2 {
+		right: 16.666667%;
+	}
+	.pull-md-3 {
+		right: 25%;
+	}
+	.pull-md-4 {
+		right: 33.333333%;
+	}
+	.pull-md-5 {
+		right: 41.666667%;
+	}
+	.pull-md-6 {
+		right: 50%;
+	}
+	.pull-md-7 {
+		right: 58.333333%;
+	}
+	.pull-md-8 {
+		right: 66.666667%;
+	}
+	.pull-md-9 {
+		right: 75%;
+	}
+	.pull-md-10 {
+		right: 83.333333%;
+	}
+	.pull-md-11 {
+		right: 91.666667%;
+	}
+	.pull-md-12 {
+		right: 100%;
+	}
+	.push-md-0 {
+		left: auto;
+	}
+	.push-md-1 {
+		left: 8.333333%;
+	}
+	.push-md-2 {
+		left: 16.666667%;
+	}
+	.push-md-3 {
+		left: 25%;
+	}
+	.push-md-4 {
+		left: 33.333333%;
+	}
+	.push-md-5 {
+		left: 41.666667%;
+	}
+	.push-md-6 {
+		left: 50%;
+	}
+	.push-md-7 {
+		left: 58.333333%;
+	}
+	.push-md-8 {
+		left: 66.666667%;
+	}
+	.push-md-9 {
+		left: 75%;
+	}
+	.push-md-10 {
+		left: 83.333333%;
+	}
+	.push-md-11 {
+		left: 91.666667%;
+	}
+	.push-md-12 {
+		left: 100%;
+	}
+	.offset-md-0 {
+		margin-left: 0%;
+	}
+	.offset-md-1 {
+		margin-left: 8.333333%;
+	}
+	.offset-md-2 {
+		margin-left: 16.666667%;
+	}
+	.offset-md-3 {
+		margin-left: 25%;
+	}
+	.offset-md-4 {
+		margin-left: 33.333333%;
+	}
+	.offset-md-5 {
+		margin-left: 41.666667%;
+	}
+	.offset-md-6 {
+		margin-left: 50%;
+	}
+	.offset-md-7 {
+		margin-left: 58.333333%;
+	}
+	.offset-md-8 {
+		margin-left: 66.666667%;
+	}
+	.offset-md-9 {
+		margin-left: 75%;
+	}
+	.offset-md-10 {
+		margin-left: 83.333333%;
+	}
+	.offset-md-11 {
+		margin-left: 91.666667%;
+	}
+}
+
+@media (min-width: 1024px) {
+	.col-lg-1 {
+		float: left;
+		width: 8.333333%;
+	}
+	.col-lg-2 {
+		float: left;
+		width: 16.666667%;
+	}
+	.col-lg-3 {
+		float: left;
+		width: 25%;
+	}
+	.col-lg-4 {
+		float: left;
+		width: 33.333333%;
+	}
+	.col-lg-5 {
+		float: left;
+		width: 41.666667%;
+	}
+	.col-lg-6 {
+		float: left;
+		width: 50%;
+	}
+	.col-lg-7 {
+		float: left;
+		width: 58.333333%;
+	}
+	.col-lg-8 {
+		float: left;
+		width: 66.666667%;
+	}
+	.col-lg-9 {
+		float: left;
+		width: 75%;
+	}
+	.col-lg-10 {
+		float: left;
+		width: 83.333333%;
+	}
+	.col-lg-11 {
+		float: left;
+		width: 91.666667%;
+	}
+	.col-lg-12 {
+		float: left;
+		width: 100%;
+	}
+	.pull-lg-0 {
+		right: auto;
+	}
+	.pull-lg-1 {
+		right: 8.333333%;
+	}
+	.pull-lg-2 {
+		right: 16.666667%;
+	}
+	.pull-lg-3 {
+		right: 25%;
+	}
+	.pull-lg-4 {
+		right: 33.333333%;
+	}
+	.pull-lg-5 {
+		right: 41.666667%;
+	}
+	.pull-lg-6 {
+		right: 50%;
+	}
+	.pull-lg-7 {
+		right: 58.333333%;
+	}
+	.pull-lg-8 {
+		right: 66.666667%;
+	}
+	.pull-lg-9 {
+		right: 75%;
+	}
+	.pull-lg-10 {
+		right: 83.333333%;
+	}
+	.pull-lg-11 {
+		right: 91.666667%;
+	}
+	.pull-lg-12 {
+		right: 100%;
+	}
+	.push-lg-0 {
+		left: auto;
+	}
+	.push-lg-1 {
+		left: 8.333333%;
+	}
+	.push-lg-2 {
+		left: 16.666667%;
+	}
+	.push-lg-3 {
+		left: 25%;
+	}
+	.push-lg-4 {
+		left: 33.333333%;
+	}
+	.push-lg-5 {
+		left: 41.666667%;
+	}
+	.push-lg-6 {
+		left: 50%;
+	}
+	.push-lg-7 {
+		left: 58.333333%;
+	}
+	.push-lg-8 {
+		left: 66.666667%;
+	}
+	.push-lg-9 {
+		left: 75%;
+	}
+	.push-lg-10 {
+		left: 83.333333%;
+	}
+	.push-lg-11 {
+		left: 91.666667%;
+	}
+	.push-lg-12 {
+		left: 100%;
+	}
+	.offset-lg-0 {
+		margin-left: 0%;
+	}
+	.offset-lg-1 {
+		margin-left: 8.333333%;
+	}
+	.offset-lg-2 {
+		margin-left: 16.666667%;
+	}
+	.offset-lg-3 {
+		margin-left: 25%;
+	}
+	.offset-lg-4 {
+		margin-left: 33.333333%;
+	}
+	.offset-lg-5 {
+		margin-left: 41.666667%;
+	}
+	.offset-lg-6 {
+		margin-left: 50%;
+	}
+	.offset-lg-7 {
+		margin-left: 58.333333%;
+	}
+	.offset-lg-8 {
+		margin-left: 66.666667%;
+	}
+	.offset-lg-9 {
+		margin-left: 75%;
+	}
+	.offset-lg-10 {
+		margin-left: 83.333333%;
+	}
+	.offset-lg-11 {
+		margin-left: 91.666667%;
+	}
+}
+
+/*
+   * 
+   ******************** visibility **********************/
+
+.hidden-xs-up {
+	display: none !important;
+}
+
+@media (max-width: 575px) {
+	.hidden-xs-down {
+		display: none !important;
+	}
+}
+
+@media (min-width: 576px) {
+	.hidden-sm-up {
+		display: none !important;
+	}
+}
+
+@media (max-width: 767px) {
+	.hidden-sm-down {
+		display: none !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.hidden-md-up {
+		display: none !important;
+	}
+}
+
+@media (max-width: 1023px) {
+	.hidden-md-down {
+		display: none !important;
+	}
+}
+
+@media (min-width: 1024px) {
+	.hidden-lg-up {
+		display: none !important;
+	}
+}
+
+.hidden-lg-down {
+	display: none !important;
+}
+
+/*
+   * 
+   ******************** flex **********************/
+
+.flex {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.flex .row:before,
+.flex .clearfix:before {
+	content: none;
+}
+
+.flex > * {
+	-webkit-flex: 0 1 auto;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+}
+/* Best Sellers */
+.best-sellers .product:nth-of-type(1) {
+	display: block;
+}
+.best-sellers .product:nth-of-type(1) .image {
+	background-image: url("https://i.ebayimg.com/images/g/f38AAOSwU91l6-ay/s-l1600.png");
+}
+.best-sellers .product:nth-of-type(1) .title:before {
+	content: "NHS Lanyard with Clip Pink Trauma Service Staff ID Badge Holder";
+}
+.best-sellers .product:nth-of-type(1) .price:before {
+	content: "\00A3 13.79";
+}
+.best-sellers .product:nth-of-type(1) .rrp:before {
+	content: "\00A3 Not Available";
+}
+.best-sellers .product:nth-of-type(1) .rrp {
+	visibility: hidden;
+}
+/* Best Sellers */
+.best-sellers .product:nth-of-type(2) {
+	display: block;
+}
+.best-sellers .product:nth-of-type(2) .image {
+	background-image: url("https://i.ebayimg.com/images/g/AbQAAOSwlORlykm3/s-l1600.png?set_id=880000500F");
+}
+.best-sellers .product:nth-of-type(2) .title:before {
+	content: "Medium NHS Scrub Top Navy BLue Unisex Tunic";
+}
+.best-sellers .product:nth-of-type(2) .price:before {
+	content: "\00A3 15.79";
+}
+.best-sellers .product:nth-of-type(2) .rrp:before {
+	content: "\00A3 Not Available";
+}
+.best-sellers .product:nth-of-type(2) .rrp {
+	visibility: show;
+}
+/* Best Sellers */
+.best-sellers .product:nth-of-type(3) {
+	display: block;
+}
+.best-sellers .product:nth-of-type(3) .image {
+	background-image: url("https://i.ebayimg.com/images/g/HSUAAOSwB0hlupCQ/s-l1600.jpg?set_id=880000500F");
+}
+.best-sellers .product:nth-of-type(3) .title:before {
+	content: "St John Ambulance Uniform Epaulettes - Grey";
+}
+.best-sellers .product:nth-of-type(3) .price:before {
+	content: "\00A3 32.79";
+}
+.best-sellers .product:nth-of-type(3) .rrp:before {
+	content: "\00A3 Not Available";
+}
+.best-sellers .product:nth-of-type(3) .rrp {
+	visibility: show;
+}
+/* Best Sellers */
+.best-sellers .product:nth-of-type(4) {
+	display: block;
+}
+.best-sellers .product:nth-of-type(4) .image {
+	background-image: url("https://i.ebayimg.com/images/g/WwUAAOSwLlBlrMAA/s-l1600.png?set_id=880000500F");
+}
+.best-sellers .product:nth-of-type(4) .title:before {
+	content: "Green NHS Emergency Medicine Medium Scrub Top";
+}
+.best-sellers .product:nth-of-type(4) .price:before {
+	content: "\00A3 19.49";
+}
+.best-sellers .product:nth-of-type(4) .rrp:before {
+	content: "\00A3 Not Available";
+}
+.best-sellers .product:nth-of-type(4) .rrp {
+	visibility: show;
+}
+/* Best Sellers */
+.best-sellers .product:nth-of-type(5) {
+	display: block;
+}
+.best-sellers .product:nth-of-type(5) .image {
+	background-image: url("https://i.ebayimg.com/00/s/MTUwMFgxNTAw/z/3zgAAOSwPkBjYt8O/$_1.JPG?set_id=880000500F");
+}
+.best-sellers .product:nth-of-type(5) .title:before {
+	content: "Post-it Super Sticky Notes Value Pack Assorted Colours 24 Pads";
+}
+.best-sellers .product:nth-of-type(5) .price:before {
+	content: "\00A3 29.99";
+}
+.best-sellers .product:nth-of-type(5) .rrp:before {
+	content: "\00A3 32.97";
+}
+.best-sellers .product:nth-of-type(5) .rrp {
+	visibility: show;
+}
+/* Best Sellers */
+.best-sellers .product:nth-of-type(6) {
+	display: block;
+}
+.best-sellers .product:nth-of-type(6) .image {
+	background-image: url("https://i.ebayimg.com/00/s/MTUwMFgxNTAw/z/RqIAAOSwbxJjmuxx/$_12.PNG?set_id=880000500F");
+}
+.best-sellers .product:nth-of-type(6) .title:before {
+	content: "Scotch Magic Invisible Adhesive Sticky Tape 9 Rolls with Cat-810 Tape Dispenser";
+}
+.best-sellers .product:nth-of-type(6) .price:before {
+	content: "\00A3 17.29";
+}
+.best-sellers .product:nth-of-type(6) .rrp:before {
+	content: "\00A3 Not Available";
+}
+.best-sellers .product:nth-of-type(6) .rrp {
+	visibility: hidden;
+}
+/* Best Sellers */
+.best-sellers .product:nth-of-type(7) {
+	display: block;
+}
+.best-sellers .product:nth-of-type(7) .image {
+	background-image: url("https://i.ebayimg.com/00/s/MTUwMFgxNTAw/z/6kEAAOSwHDxjkM37/$_1.JPG?set_id=880000500F");
+}
+.best-sellers .product:nth-of-type(7) .title:before {
+	content: "Scotch Tape Dispenser C38 + Scotch Magic Invisible Tape Sticky Tape 4 Rolls";
+}
+.best-sellers .product:nth-of-type(7) .price:before {
+	content: "\00A3 16.99";
+}
+.best-sellers .product:nth-of-type(7) .rrp:before {
+	content: "\00A3 18.97";
+}
+.best-sellers .product:nth-of-type(7) .rrp {
+	visibility: show;
+}
+/* Best Sellers */
+.best-sellers .product:nth-of-type(8) {
+	display: block;
+}
+.best-sellers .product:nth-of-type(8) .image {
+	background-image: url("https://i.ebayimg.com/00/s/MTUwMFgxNTAw/z/DjAAAOSwzcBkYz4a/$_1.JPG?set_id=880000500F");
+}
+.best-sellers .product:nth-of-type(8) .title:before {
+	content: "3M Scotch 371 Box Sealing Tape Transparent 44 N/100mm 50mm x 66m 6 Rolls";
+}
+.best-sellers .product:nth-of-type(8) .price:before {
+	content: "\00A3 11.99";
+}
+.best-sellers .product:nth-of-type(8) .rrp:before {
+	content: "\00A3 12.97";
+}
+.best-sellers .product:nth-of-type(8) .rrp {
+	visibility: show;
+}
+/* Best Sellers */
+.best-sellers .product:nth-of-type(9) {
+	display: block;
+}
+.best-sellers .product:nth-of-type(9) .image {
+	background-image: url("https://i.ebayimg.com/00/s/MTUwMFgxNTAw/z/FCwAAOSwXJ5keFo9/$_1.JPG?set_id=880000500F");
+}
+.best-sellers .product:nth-of-type(9) .title:before {
+	content: "12 x Scotch Packaging Parcel Tape Box Strong Adhesive Packing Clear 50mm x 66m";
+}
+.best-sellers .product:nth-of-type(9) .price:before {
+	content: "\00A3 18.68";
+}
+.best-sellers .product:nth-of-type(9) .rrp:before {
+	content: "\00A3 23.94";
+}
+.best-sellers .product:nth-of-type(9) .rrp {
+	visibility: show;
+}
+/* Best Sellers */
+.best-sellers .product:nth-of-type(10) {
+	display: block;
+}
+.best-sellers .product:nth-of-type(10) .image {
+	background-image: url("https://i.ebayimg.com/00/s/MTUwMFgxNTAw/z/QxEAAOSwYIxhqf--/$_1.JPG?set_id=880000500F");
+}
+.best-sellers .product:nth-of-type(10) .title:before {
+	content: "DISCON - Post-it Z-Notes Bear 330 Sticky Notes Dispenser With 2 Sticky Notes 76 ";
+}
+.best-sellers .product:nth-of-type(10) .price:before {
+	content: "\00A3 7.99";
+}
+.best-sellers .product:nth-of-type(10) .rrp:before {
+	content: "\00A3 10.97";
+}
+.best-sellers .product:nth-of-type(10) .rrp {
+	visibility: show;
+}
+.best-sellers {
+	display: block;
+}
+
+</style>
+<body>
+<div class="hidden">
+	<div>
+		<p><span style="font-size: small; font-family: arial, helvetica, sans-serif;">Purple lanyard with white lettering, smooth finish and retractable badge reel & clip attachment. Branded with the Royal College of Emergency Medicine logo and crest.</span></p>
+		<ul>
+			<li><span style="font-size: small; font-family: arial, helvetica, sans-serif;">Double-side branding</span></li>
+			<li><span style="font-size: small; font-family: arial, helvetica, sans-serif;">Single breakaway clip</span></li>
+			<li><span style="font-size: small; font-family: arial, helvetica, sans-serif;">Metal clip for ID badges, cards, etc</span></li>
+			
+
+		</ul>
+		<div style="clear: both"></div>
+	</div>
+</div>
+
+<div id="page">
+
+	<header id="header" class="section">
+		<div class="container">
+
+			<a target="_blank" href="https://www.ebay.co.uk/str/revyvapparelandretail?mkcid=1&mkrid=710-53481-19255-0&siteid=3&campid=5339036136&toolid=11800&mkevt=1" title="Revyv UK" class="logo">
+				<img src="https://i.ebayimg.com/images/g/2WIAAOSwFoFjRWpx/s-l140.webp" alt="Revyv UK store logo" class="img-circle" >
+			</a>
+
+		</div>
+	</header>
+	<header id="header-menu" class="section hidden-md-down">
+		<div class="container">
+			<ul class="categories">
+				<li><a target="_blank" href="https://www.ebay.co.uk/str/revyvapparelandretail/APPAREL-FASHION/_i.html?store_cat=35143698017&mkcid=1&mkrid=710-53481-19255-0&siteid=3&campid=5339036136&toolid=11800&mkevt=1">Apparel & Fashion</a></li>
+				<li><a target="_blank" href="https://www.ebay.co.uk/str/revyvapparelandretail/Uniform-Workwear/_i.html?store_cat=36041095017&mkcid=1&mkrid=710-53481-19255-0&siteid=3&campid=5339036136&toolid=11800&mkevt=1">Uniform & Workwear</a></li>
+				<li><a target="_blank" href="https://www.ebay.co.uk/str/revyvapparelandretail/OFFICE-RETAIL-PACKAGING/_i.html?store_cat=34959310017&mkcid=1&mkrid=710-53481-19255-0&siteid=3&campid=5339036136&toolid=11800&mkevt=1">Office & Mailing</a></li>
+				<li><a target="_blank" href="https://www.ebay.co.uk/str/revyvapparelandretail/HOME-LIFESTYLE/_i.html?store_cat=35401076017&mkcid=1&mkrid=710-53481-19255-0&siteid=3&campid=5339036136&toolid=11800&mkevt=1">Home & Lifestyle</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- End - eBay Shop Categories -->
+
+	<div id="main" class="section">
+		<section class="container">
+			<div class="row">
+
+				<div id="title" class="col-xs-12">
+					<h1>Royal College of Emergency Medicine Lanyard</h1>
+				</div>
+
+				<div class="col-xs-12">
+
+					<div class="row">
+
+						<div class="col-xs-12 col-md-6">
+							<div class="images">
+
+								<img src="https://ebaydesigns-studioworx.elist.store/clients/trojan/3m/listing/images/sentinel.png" alt="Sentinel" class="main-sentinel">
+
+								<div class="image video" data-image="">
+									<input id="thumbnail-control-video" type="radio" name="thumbnails" class="thumbnails-control">
+									<label for="thumbnail-control-video" id="thumbnail-video" class="thumbnail">
+										<img src="https://res.cloudinary.com/revyv/image/upload/v1710429811/Perm%20Assets/Icons/revyv-ebay-video-icon.png" alt="Thumbnail Video" class="img-center">
+									</label>
+
+									<input id="image-control-video" type="checkbox" class="main-control">
+									<label for="image-control-video" id="image-video" class="main transition">
+										<div class="main-content">
+											<video class="img-center" controls="">
+												<source src="" type="video/mp4">
+												Your browser does not support the video tag.
+											</video>
+											<label for="thumbnail-control-1" data-next="https://i.ebayimg.com/images/g/~MUAAOSwjU5l8klP/s-l1600.jpg" class="next"></label>
+										</div>
+									</label>
+								</div>
+								<div class="image" data-image="https://i.ebayimg.com/images/g/MPUAAOSwmfJlp7uY/s-l1600.jpg">
+									<input id="thumbnail-control-1" type="radio" name="thumbnails" class="thumbnails-control" checked="">
+									<label for="thumbnail-control-1" id="thumbnail-1" class="thumbnail">
+										<img src="https://i.ebayimg.com/images/g/MPUAAOSwmfJlp7uY/s-l1600.jpg" alt="Purple Royal College of Emergency Medicine (RCEM) lanyard with retractable ID badge reel" class="img-center">
+									</label>
+
+									<input id="image-control-1" type="checkbox" class="main-control">
+									<label for="image-control-1" id="image-1" class="main transition">
+										<div class="main-content">
+											<img src="https://i.ebayimg.com/images/g/MPUAAOSwmfJlp7uY/s-l1600.jpg" alt="Purple Royal College of Emergency Medicine (RCEM) lanyard with retractable ID badge reel" class="img-center">
+											<label for="thumbnail-control-video" data-prev="" class="prev"></label>
+											<label for="thumbnail-control-2" data-next="https://i.ebayimg.com/images/g/MPUAAOSwmfJlp7uY/s-l1600.jpg" class="next"></label>
+										</div>
+									</label>
+								</div>
+								<div class="image" data-image="https://i.ebayimg.com/images/g/~MUAAOSwjU5l8klP/s-l1600.jpg">
+									<input id="thumbnail-control-2" type="radio" name="thumbnails" class="thumbnails-control">
+									<label for="thumbnail-control-2" id="thumbnail-2" class="thumbnail">
+										<img src="https://i.ebayimg.com/images/g/~MUAAOSwjU5l8klP/s-l1600.jpg" alt="NHS Emergency Medicine Consultant wearing Purple Royal College of Emergency Medicine (RCEM) lanyard with retractable ID badge reel" class="img-center">
+									</label>
+
+									<input id="image-control-2" type="checkbox" class="main-control">
+									<label for="image-control-2" id="image-2" class="main transition">
+										<div class="main-content">
+											<img src="https://i.ebayimg.com/images/g/~MUAAOSwjU5l8klP/s-l1600.jpg" alt="NHS Emergency Medicine Consultant wearing Purple Royal College of Emergency Medicine (RCEM) lanyard with retractable ID badge reel" class="img-center">
+											<label for="thumbnail-control-1" data-prev="https://i.ebayimg.com/images/g/MPUAAOSwmfJlp7uY/s-l1600.jpg" class="prev"></label>
+											<label for="thumbnail-control-3" data-next="https://i.ebayimg.com/images/g/xCEAAOSwNA1lp7uY/s-l1600.jpg" class="next"></label>
+										</div>
+									</label>
+								</div>
+								<div class="image" data-image="https://i.ebayimg.com/images/g/xCEAAOSwNA1lp7uY/s-l1600.jpg">
+									<input id="thumbnail-control-3" type="radio" name="thumbnails" class="thumbnails-control">
+									<label for="thumbnail-control-3" id="thumbnail-3" class="thumbnail">
+										<img src="https://i.ebayimg.com/images/g/xCEAAOSwNA1lp7uY/s-l1600.jpg" alt="Purple Royal College of Emergency Medicine (RCEM) lanyard with retractable ID badge reel" class="img-center">
+									</label>
+
+									<input id="image-control-3" type="checkbox" class="main-control">
+									<label for="image-control-3" id="image-3" class="main transition">
+										<div class="main-content">
+											<img src="https://www.appliancesdirect.co.uk/Images/3m%2070005197606%20NEW_3_Supersize.jpg?versionid=3" alt="Purple Royal College of Emergency Medicine (RCEM) lanyard with retractable ID badge reel" class="img-center">
+											<label for="thumbnail-control-2" data-prev="https://i.ebayimg.com/images/g/~MUAAOSwjU5l8klP/s-l1600.jpg" class="prev"></label>
+											<label for="thumbnail-control-4" data-next="https://i.ebayimg.com/images/g/~MUAAOSwjU5l8klP/s-l1600.jpg" class="next"></label>
+										</div>
+									</label>
+								</div>
+								<div class="image" data-image="ttps://www.appliancesdirect.co.uk/Images/3m%2070005197606%20NEW_4_Supersize.jpg?versionid=3">
+									<input id="thumbnail-control-4" type="radio" name="thumbnails" class="thumbnails-control">
+									<label for="thumbnail-control-4" id="thumbnail-4" class="thumbnail">
+										<img src="https://www.appliancesdirect.co.uk/Images/3m%2070005197606%20NEW_4_Supersize.jpg?versionid=3" alt="Purple Royal College of Emergency Medicine (RCEM) lanyard with retractable ID badge reel" class="img-center">
+									</label>
+
+									<input id="image-control-4" type="checkbox" class="main-control">
+									<label for="image-control-4" id="image-4" class="main transition">
+										<div class="main-content">
+											<img src="https://www.appliancesdirect.co.uk/Images/3m%2070005197606%20NEW_4_Supersize.jpg?versionid=3" alt="Purple Royal College of Emergency Medicine (RCEM) lanyard with retractable ID badge reel" class="img-center">
+											<label for="thumbnail-control-3" data-prev="https://i.ebayimg.com/images/g/xCEAAOSwNA1lp7uY/s-l1600.jpg" class="prev"></label>
+											<label for="thumbnail-control-5" data-next="https://www.appliancesdirect.co.uk/Images/3m%2070005197606%20NEW_5_Supersize.jpg?versionid=3" class="next"></label>
+										</div>
+									</label>
+								</div>
+								<div class="image" data-image="https://www.appliancesdirect.co.uk/Images/3m%2070005197606%20NEW_5_Supersize.jpg?versionid=3">
+									<input id="thumbnail-control-5" type="radio" name="thumbnails" class="thumbnails-control">
+									<label for="thumbnail-control-5" id="thumbnail-5" class="thumbnail">
+										<img src="https://www.appliancesdirect.co.uk/Images/3m%2070005197606%20NEW_5_Supersize.jpg?versionid=3" alt="Thumbnail 5" class="img-center">
+									</label>
+
+									<input id="image-control-5" type="checkbox" class="main-control">
+									<label for="image-control-5" id="image-5" class="main transition">
+										<div class="main-content">
+											<img src="https://www.appliancesdirect.co.uk/Images/3m%2070005197606%20NEW_5_Supersize.jpg?versionid=3" alt="Purple Royal College of Emergency Medicine (RCEM) lanyard with retractable ID badge reel" class="img-center">
+											<label for="thumbnail-control-4" data-prev="https://www.appliancesdirect.co.uk/Images/3m%2070005197606%20NEW_4_Supersize.jpg?versionid=3" class="prev"></label>
+											<label for="thumbnail-control-6" data-next="" class="next"></label>
+										</div>
+									</label>
+								</div>
+								<div class="image" data-image="">
+									<input id="thumbnail-control-6" type="radio" name="thumbnails" class="thumbnails-control">
+									<label for="thumbnail-control-6" id="thumbnail-6" class="thumbnail">
+										<img src="" alt="Thumbnail 6" class="img-center">
+									</label>
+
+									<input id="image-control-6" type="checkbox" class="main-control">
+									<label for="image-control-6" id="image-6" class="main transition">
+										<div class="main-content">
+											<img src="" alt="Purple Royal College of Emergency Medicine (RCEM) lanyard with retractable ID badge reel" class="img-center">
+											<label for="thumbnail-control-5" data-prev="https://www.appliancesdirect.co.uk/Images/3m%2070005197606%20NEW_5_Supersize.jpg?versionid=3" class="prev"></label>
+											<label for="thumbnail-control-7" data-next="" class="next"></label>
+										</div>
+									</label>
+								</div>
+								<div class="image" data-image="">
+									<input id="thumbnail-control-7" type="radio" name="thumbnails" class="thumbnails-control">
+									<label for="thumbnail-control-7" id="thumbnail-7" class="thumbnail">
+										<img src="" alt="Thumbnail 7" class="img-center">
+									</label>
+
+									<input id="image-control-7" type="checkbox" class="main-control">
+									<label for="image-control-7" id="image-7" class="main transition">
+										<div class="main-content">
+											<img src="" alt="Purple Royal College of Emergency Medicine (RCEM) lanyard with retractable ID badge reel" class="img-center">
+											<label for="thumbnail-control-6" data-prev="" class="prev"></label>
+											<label for="thumbnail-control-8" data-next="" class="next"></label>
+										</div>
+									</label>
+								</div>
+								<div class="image" data-image="">
+									<input id="thumbnail-control-8" type="radio" name="thumbnails" class="thumbnails-control">
+									<label for="thumbnail-control-8" id="thumbnail-8" class="thumbnail">
+										<img src="" alt="Thumbnail 8" class="img-center">
+									</label>
+
+									<input id="image-control-8" type="checkbox" class="main-control">
+									<label for="image-control-8" id="image-8" class="main transition">
+										<div class="main-content">
+											<img src="" alt="  Postit 67010AB Notes Markers Assorted Colours 12.7 x 44.4mm Pack Of 10 Pads" class="img-center">
+											<label for="thumbnail-control-7" data-prev="" class="prev"></label>
+											<label for="thumbnail-control-9" data-next="" class="next"></label>
+										</div>
+									</label>
+								</div>
+								<div class="image" data-image="">
+									<input id="thumbnail-control-9" type="radio" name="thumbnails" class="thumbnails-control">
+									<label for="thumbnail-control-9" id="thumbnail-9" class="thumbnail">
+										<img src="" alt="Thumbnail 9" class="img-center">
+									</label>
+
+									<input id="image-control-9" type="checkbox" class="main-control">
+									<label for="image-control-9" id="image-9" class="main transition">
+										<div class="main-content">
+											<img src="" alt="Purple Royal College of Emergency Medicine (RCEM) lanyard with retractable ID badge reel" class="img-center">
+											<label for="thumbnail-control-8" data-prev="" class="prev"></label>
+											<label for="thumbnail-control-10" data-next="" class="next"></label>
+										</div>
+									</label>
+								</div>
+								<div class="image" data-image="">
+									<input id="thumbnail-control-10" type="radio" name="thumbnails" class="thumbnails-control">
+									<label for="thumbnail-control-10" id="thumbnail-10" class="thumbnail">
+										<img src="" alt="Thumbnail 10" class="img-center">
+									</label>
+
+									<input id="image-control-10" type="checkbox" class="main-control">
+									<label for="image-control-10" id="image-10" class="main transition">
+										<div class="main-content">
+											<img src="" alt="Purple Royal College of Emergency Medicine (RCEM) lanyard with retractable ID badge reel" class="img-center">
+											<label for="thumbnail-control-9" data-prev="" class="prev"></label>
+											<label for="thumbnail-control-11" data-next="" class="next"></label>
+										</div>
+									</label>
+								</div>
+								<div class="image" data-image="">
+									<input id="thumbnail-control-11" type="radio" name="thumbnails" class="thumbnails-control">
+									<label for="thumbnail-control-11" id="thumbnail-11" class="thumbnail">
+										<img src="" alt="Thumbnail 11" class="img-center">
+									</label>
+
+									<input id="image-control-11" type="checkbox" class="main-control">
+									<label for="image-control-11" id="image-11" class="main transition">
+										<div class="main-content">
+											<img src="" alt="Purple Royal College of Emergency Medicine (RCEM) lanyard with retractable ID badge reel" class="img-center">
+											<label for="thumbnail-control-10" data-prev="" class="prev"></label>
+											<label for="thumbnail-control-12" data-next="" class="next"></label>
+										</div>
+									</label>
+								</div>
+								<div class="image" data-image="">
+									<input id="thumbnail-control-12" type="radio" name="thumbnails" class="thumbnails-control">
+									<label for="thumbnail-control-12" id="thumbnail-12" class="thumbnail">
+										<img src="" alt="Thumbnail 12" class="img-center">
+									</label>
+
+									<input id="image-control-12" type="checkbox" class="main-control">
+									<label for="image-control-12" id="image-12" class="main transition">
+										<div class="main-content">
+											<img src="" alt="  Postit 67010AB Notes Markers Assorted Colours 12.7 x 44.4mm Pack Of 10 Pads" class="img-center">
+											<label for="thumbnail-control-11" data-prev="" class="prev"></label>
+											<label for="thumbnail-control-13" data-next="" class="next"></label>
+										</div>
+									</label>
+								</div>
+								<div class="image" data-image="">
+									<input id="thumbnail-control-13" type="radio" name="thumbnails" class="thumbnails-control">
+									<label for="thumbnail-control-13" id="thumbnail-13" class="thumbnail">
+										<img src="" alt="Thumbnail 13" class="img-center">
+									</label>
+
+									<input id="image-control-13" type="checkbox" class="main-control">
+									<label for="image-control-13" id="image-13" class="main transition">
+										<div class="main-content">
+											<img src="" alt="  Postit 67010AB Notes Markers Assorted Colours 12.7 x 44.4mm Pack Of 10 Pads" class="img-center">
+											<label for="thumbnail-control-12" data-prev="" class="prev"></label>
+											<label for="thumbnail-control-14" data-next="" class="next"></label>
+										</div>
+									</label>
+								</div>
+								<div class="image" data-image="">
+									<input id="thumbnail-control-14" type="radio" name="thumbnails" class="thumbnails-control">
+									<label for="thumbnail-control-14" id="thumbnail-14" class="thumbnail">
+										<img src="" alt="Thumbnail 14" class="img-center">
+									</label>
+
+									<input id="image-control-14" type="checkbox" class="main-control">
+									<label for="image-control-14" id="image-14" class="main transition">
+										<div class="main-content">
+											<img src="" alt="  Postit 67010AB Notes Markers Assorted Colours 12.7 x 44.4mm Pack Of 10 Pads" class="img-center">
+											<label for="thumbnail-control-13" data-prev="" class="prev"></label>
+											<label for="thumbnail-control-15" data-next="" class="next"></label>
+										</div>
+									</label>
+								</div>
+								<div class="image" data-image="">
+									<input id="thumbnail-control-15" type="radio" name="thumbnails" class="thumbnails-control">
+									<label for="thumbnail-control-15" id="thumbnail-15" class="thumbnail">
+										<img src="" alt="Thumbnail 15" class="img-center">
+									</label>
+
+									<input id="image-control-15" type="checkbox" class="main-control">
+									<label for="image-control-15" id="image-15" class="main transition">
+										<div class="main-content">
+											<img src="" alt="  Postit 67010AB Notes Markers Assorted Colours 12.7 x 44.4mm Pack Of 10 Pads" class="img-center">
+											<label for="thumbnail-control-14" data-prev="" class="prev"></label>
+											<label for="thumbnail-control-16" data-next="" class="next"></label>
+										</div>
+									</label>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-md-6">
+							-
+                                        <div class="rrp" data-rrp="4.97">
+                                            <span class="label">RRP</span>
+                                            <span class="currency">&pound;</span><span class="value">4.97</span>
+                                        </div>
+                                        <div class="main-price" data-price="4.99">
+                                            <span class="currency">&pound;</span><span class="value">4.99</span>
+                                        </div>
+                                        
+							<div class="buttons hidden-md-down clearfix">
+								<a target="_blank" class="btn btn-default transition" href="https://contact.ebay.co.uk/ws/eBayISAPI.dll?FindAnswers&amp;requested=3mukstore">Ask a question</a>
+								<a target="_blank" class="btn btn-default transition" href="https://www.ebay.co.uk/str/3mukstore/-/_i.html?store_cat=25322878014">Similar items</a>
+								<a target="_blank" class="btn btn-default transition" href="https://www.ebay.co.uk/usr/3mukstore">Follow us</a>
+							</div>
+							<div class="tabs margin-bottom">
+
+								<input id="tab-control-1" type="radio" name="tabs" class="tab-control" checked="">
+								<label for="tab-control-1" class="desktop-label">Description</label>
+
+								<input id="tab-control-2" type="radio" name="tabs" class="tab-control">
+								<label for="tab-control-2" class="desktop-label">Specification</label>
+
+								<input id="tab-control-3" type="radio" name="tabs" class="tab-control">
+								<label for="tab-control-3" class="desktop-label">Delivery</label>
+
+								<label for="tab-control-1" class="mobile-label">Description</label>
+								<div id="tab-content-1" class="tab-content">
+									<!-- Description Tab Content -->
+									<div class="item-description">
+										<p><span style="font-size: small; font-family: arial, helvetica, sans-serif;">Purple lanyard with white lettering, smooth finish and retractable badge reel & clip attachment. Branded with the Royal College of Emergency Medicine logo and crest.</span></p>
+										<ul>
+										<li><span style="font-size: small; font-family: arial, helvetica, sans-serif;">Double-side branding</span></li>
+										<li><span style="font-size: small; font-family: arial, helvetica, sans-serif;">Single breakaway clip</span></li>
+										<li><span style="font-size: small; font-family: arial, helvetica, sans-serif;">Metal clip hook for IDs, cards, etc</span></li>
+										<li><span style="font-size: small; font-family: Arial, Helvetica, sans-serif;">Smooth finish</span></li>
+										<li><span style="font-size: small; font-family: Arial, Helvetica, sans-serif;"></span></li>
+										</ul>
+										<div style="clear: both"></div>
+									</div>
+								</div>
+
+								<label for="tab-control-2" class="mobile-label">Specification</label>
+								<div id="tab-content-2" class="tab-content">
+									<!-- Specification Tab Content -->
+
+									({IF["[{PRODUCT_PROPERTY_BODY PART}]"!=""]})
+
+									({ENDIF})
+
+									({IF["Post-it"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_COUNTRY/REGION OF MANUFACTURE}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_EAN}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_MAIN COLOUR}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_MPN}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_SIZE}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_TYPE}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_UNIT QUANTITY}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_UNIT TYPE}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_BUNDLE LISTING}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_HEIGHT}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_MATERIAL}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_THEME}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_WIDTH}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_APPLICABLE REGIONS}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_BUNDLE DESCRIPTION}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_CUSTOM BUNDLE}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_MODIFICATION DESCRIPTION}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_MODIFIED ITEM}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_NON-DOMESTIC PRODUCT}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_ITEM}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_COLOUR}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_SUB-TYPE}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_DIMENSIONS}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_NUMBER OF ROLLS}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_FEATURES}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_MANUFACTURER WARRANTY}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_MOUSE PAD DESIGN}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_COLOR}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_FEATURED REFINEMENTS}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_FORM}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_FRAGRANCE}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_ROOM}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_TYPE OF CLEANER}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_CORDED/ CORDLESS}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_MODEL}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_POWER (W)}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_FACIAL COVERAGE}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_MASK SIZE}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_COMPATIBLE PRODUCT LINE}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_TO FIT SCREEN SIZE}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_COMPATIBLE BRAND}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_COMPATIBLE MODEL}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_WEIGHT}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_FUNCTION}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_SCENT}]"!=""]})
+
+									({ENDIF})
+
+									({IF["[{PRODUCT_PROPERTY_SURFACE/APPLIANCE}]"!=""]})
+
+									({ENDIF})
+
+									<table class="Specification-Table" summary="Specification Information">
+										<tbody>
+											<tr>
+												<th>Body Part</th>
+												<td>[{PRODUCT_PROPERTY_BODY PART}]</td>
+											</tr>
+											<tr>
+												<th>Brand</th>
+												<td>Post-it</td>
+											</tr>
+											<tr>
+												<th>Country/Region of Manufacture</th>
+												<td>[{PRODUCT_PROPERTY_COUNTRY/REGION OF MANUFACTURE}]</td>
+											</tr>
+											<tr>
+												<th>EAN</th>
+												<td>[{PRODUCT_PROPERTY_EAN}]</td>
+											</tr>
+											<tr>
+												<th>Main Colour</th>
+												<td>[{PRODUCT_PROPERTY_MAIN COLOUR}]</td>
+											</tr>
+											<tr>
+												<th>MPN</th>
+												<td>[{PRODUCT_PROPERTY_MPN}]</td>
+											</tr>
+											<tr>
+												<th>Size</th>
+												<td>[{PRODUCT_PROPERTY_SIZE}]</td>
+											</tr>
+											<tr>
+												<th>Type</th>
+												<td>[{PRODUCT_PROPERTY_TYPE}]</td>
+											</tr>
+											<tr>
+												<th>Unit Quantity</th>
+												<td>[{PRODUCT_PROPERTY_UNIT QUANTITY}]</td>
+											</tr>
+											<tr>
+												<th>Unit Type</th>
+												<td>[{PRODUCT_PROPERTY_UNIT TYPED}]</td>
+											</tr>
+											<tr>
+												<th>Bundle Listing</th>
+												<td>[{PRODUCT_PROPERTY_BUNDLE LISTING}]</td>
+											</tr>
+											<tr>
+												<th>Height</th>
+												<td>[{PRODUCT_PROPERTY_HEIGHT}]</td>
+											</tr>
+											<tr>
+												<th>Material</th>
+												<td>[{PRODUCT_PROPERTY_MATERIAL}]</td>
+											</tr>
+											<tr>
+												<th>Theme</th>
+												<td>[{PRODUCT_PROPERTY_THEME}]</td>
+											</tr>
+											<tr>
+												<th>Width</th>
+												<td>[{PRODUCT_PROPERTY_WIDTH}]</td>
+											</tr>
+											<tr>
+												<th>Applicable Regions</th>
+												<td>[{PRODUCT_PROPERTY_APPLICABLE REGIONS}]</td>
+											</tr>
+											<tr>
+												<th>Bundle Description</th>
+												<td>[{PRODUCT_PROPERTY_BUNDLE DESCRIPTION}]</td>
+											</tr>
+											<tr>
+												<th>Custom Bundle</th>
+												<td>[{PRODUCT_PROPERTY_CUSTOM BUNDLE}]</td>
+											</tr>
+											<tr>
+												<th>Modification Description</th>
+												<td>[{PRODUCT_PROPERTY_MODIFICATION DESCRIPTION}]</td>
+											</tr>
+											<tr>
+												<th>Modified Item</th>
+												<td>[{PRODUCT_PROPERTY_MODIFIED ITEM}]</td>
+											</tr>
+											<tr>
+												<th>Non-Domestic Product</th>
+												<td>[{PRODUCT_PROPERTY_NON-DOMESTIC PRODUCT}]</td>
+											</tr>
+											<tr>
+												<th>Item</th>
+												<td>[{PRODUCT_PROPERTY_ITEM}]</td>
+											</tr>
+											<tr>
+												<th>Colour</th>
+												<td>[{PRODUCT_PROPERTY_COLOUR}]</td>
+											</tr>
+											<tr>
+												<th>Sub-Type</th>
+												<td>[{PRODUCT_PROPERTY_SUB-TYPE}]</td>
+											</tr>
+											<tr>
+												<th>Dimensions</th>
+												<td>[{PRODUCT_PROPERTY_DIMENSIONS}]</td>
+											</tr>
+											<tr>
+												<th>Number of Rolls</th>
+												<td>[{PRODUCT_PROPERTY_NUMBER OF ROLLS}]</td>
+											</tr>
+											<tr>
+												<th>Features</th>
+												<td>[{PRODUCT_PROPERTY_FEATURES}]</td>
+											</tr>
+											<tr>
+												<th>Manufacturer warranty</th>
+												<td>[{PRODUCT_PROPERTY_MANUFACTURER WARRANTY}]</td>
+											</tr>
+											<tr>
+												<th>Mouse Pad Design</th>
+												<td>[{PRODUCT_PROPERTY_MOUSE PAD DESIGN}]</td>
+											</tr>
+											<tr>
+												<th>Color</th>
+												<td>[{PRODUCT_PROPERTY_COLOR}]</td>
+											</tr>
+											<tr>
+												<th>Featured Refinements</th>
+												<td>[{PRODUCT_PROPERTY_FEATURED REFINEMENTS}]</td>
+											</tr>
+											<tr>
+												<th>Form</th>
+												<td>[{PRODUCT_PROPERTY_FORM}]</td>
+											</tr>
+											<tr>
+												<th>Fragrance</th>
+												<td>[{PRODUCT_PROPERTY_FRAGRANCE}]</td>
+											</tr>
+											<tr>
+												<th>Room</th>
+												<td>[{PRODUCT_PROPERTY_ROOM}]</td>
+											</tr>
+											<tr>
+												<th>Type of Cleaner</th>
+												<td>[{PRODUCT_PROPERTY_TYPE OF CLEANER}]</td>
+											</tr>
+											<tr>
+												<th>Corded/Cordless</th>
+												<td>[{PRODUCT_PROPERTY_CORDED/ CORDLESS}]</td>
+											</tr>
+											<tr>
+												<th>Model</th>
+												<td>[{PRODUCT_PROPERTY_MODEL}]</td>
+											</tr>
+											<tr>
+												<th>Power (W)</th>
+												<td>[{PRODUCT_PROPERTY_POWER (W)}]</td>
+											</tr>
+											<tr>
+												<th>Facial Coverage</th>
+												<td>[{PRODUCT_PROPERTY_FACIAL COVERAGE}]</td>
+											</tr>
+											<tr>
+												<th>Mask Size</th>
+												<td>[{PRODUCT_PROPERTY_MASK SIZE}]</td>
+											</tr>
+											<tr>
+												<th>Compatible Product Line</th>
+												<td>[{PRODUCT_PROPERTY_COMPATIBLE PRODUCT LINE}]</td>
+											</tr>
+											<tr>
+												<th>To Fit Screen Size</th>
+												<td>[{PRODUCT_PROPERTY_TO FIT SCREEN SIZE}]</td>
+											</tr>
+											<tr>
+												<th>Compatible Brand</th>
+												<td>[{PRODUCT_PROPERTY_COMPATIBLE BRAND}]</td>
+											</tr>
+											<tr>
+												<th>Compatible Model</th>
+												<td>[{PRODUCT_PROPERTY_COMPATIBLE MODEL}]</td>
+											</tr>
+											<tr>
+												<th>Weight</th>
+												<td>[{PRODUCT_PROPERTY_WEIGHT}]</td>
+											</tr>
+											<tr>
+												<th>Function</th>
+												<td>[{PRODUCT_PROPERTY_FUNCTION}]</td>
+											</tr>
+											<tr>
+												<th>Scent</th>
+												<td>[{PRODUCT_PROPERTY_SCENT}]</td>
+											</tr>
+											<tr>
+												<th>Surface/Appliance</th>
+												<td>[{PRODUCT_PROPERTY_SURFACE/APPLIANCE}]</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<label for="tab-control-3" class="mobile-label">Delivery</label>
+								<div id="tab-content-3" class="tab-content">
+									<!-- Delivery Tab Content -->
+									<p>We make every effort to offer you the delivery option to suit your needs.</p>
+
+									<h2>STANDARD DELIVERY</h2>
+
+									<p>England, Scotland, Wales, Northern Ireland</p>
+
+									<p>We use Hermes to deliver this standard delivery service. We aim to dispatch orders on the same day if received before 3pm and you will receive your parcel within 3-5 working days.</p>
+
+									<h2>PLEASE NOTE</h2>
+
+									<p>Where orders are placed at a weekend or on an English bank holiday, they will be treated as if they were received the morning of the next working day.</p>
+
+									<p>We are unable to accept orders where the full address information has not been supplied. We are also unable to accept an order where the delivery address is a PO Box, Hotel or similar.</p>
+
+									<p>We are only able to despatch to the address on your PayPal account so please confirm this is correct before confirming the purchase.</p>
+								</div>
+
+								<div class="clearfix"></div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="box-products best-sellers">
+						<h2>You may also be interested in...</h2>
+						<div class="products row clearfix">
+							<div class="product col-xs-6 col-md-3">
+								<div class="image"></div>
+								<div class="title"></div>
+								<div class="rrp"></div>
+								<div class="price"></div>
+							</div>
+							<div class="product col-xs-6 col-md-3">
+								<div class="image"></div>
+								<div class="title"></div>
+								<div class="rrp"></div>
+								<div class="price"></div>
+							</div>
+							<div class="product col-xs-6 col-md-3">
+								<div class="image"></div>
+								<div class="title"></div>
+								<div class="rrp"></div>
+								<div class="price"></div>
+							</div>
+							<div class="product col-xs-6 col-md-3">
+								<div class="image"></div>
+								<div class="title"></div>
+								<div class="rrp"></div>
+								<div class="price"></div>
+							</div>
+							<div class="product-hover">
+								<div></div>
+							</div>
+							<a class="product-link" target="_blank" href="https://www.ebay.co.uk/str/3mukstore/-/_i.html?store_cat=25322878014"><span>View these items &amp; similar</span></a>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+	</div>
+
+	<footer id="footer" class="section">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-xs-4 col-md-2 col-lg-1">
+					<img src="https://ebaydesigns-studioworx.elist.store/clients/trojan/3m/listing/images/logo-footer.png">
+				</div>
+				<div class="col-xs-8 col-md-10 col-lg-11">
+					<div class="subheading">Store Pages</div>
+					<ul class="links">
+						<li>
+							<a target="_blank" href="https://www.ebay.co.uk/str/3mukstore">Home</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://www.ebay.co.uk/str/3mukstore#tab1">About Us</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://contact.ebay.co.uk/ws/eBayISAPI.dll?FindAnswers&amp;requested=3mukstore">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+
+	<!-- © COPYRIGHT: Do not remove -->
+	<footer id="footer-sub" class="section">
+		<div class="container">
+
+			<div title="Designed &amp; Managed by Trojan" class="copyright trojan">
+				<span>Designed &amp; Managed By</span>
+				<!-- 						<img src="https://ebaydesigns-studioworx.elist.store/clients/0001_global_framework/images/trojan.gif" alt="Designed &amp; Managed by Trojan" /> -->
+				<img src="https://revyv.co.uk/images/stencil/original/image-manager/leandro-group-long-navy-logotype-new.png?t=1709456555" alt="Revyv © 2021 - 2024 Leandro Group Limited">
+			</div>
+
+		</div>
+	</footer>
+</div>
+</body>
